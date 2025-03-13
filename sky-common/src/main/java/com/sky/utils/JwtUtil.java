@@ -45,7 +45,7 @@ public class JwtUtil {
      * @param token     加密后的token
      * @return
      */
-    public static Claims parseJWT(String secretKey, String token) {
+    public static Claims parseJWT(@org.jetbrains.annotations.NotNull String secretKey, String token) {
         // 得到DefaultJwtParser
         Claims claims = Jwts.parser()
                 // 设置签名的秘钥
