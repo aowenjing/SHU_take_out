@@ -18,15 +18,15 @@ public interface SetmealDishMapper {
     List<Long> getSetmealIdsByDishIds(List<Long> dishIds);
 
     /**
-     *
-     * @param setmealDishes
-     */
-    void insertBatch(List<SetmealDish> setmealDishes);
-
-    /**
      * 根据套餐id删除套餐和菜品的关联关系
      * @param setmealId
      */
     @Delete("delete from sky_take_out.setmeal_dish where setmeal_id = #{setmealid}")
     void deleteBySetmealId(Long setmealId);
+
+    /**
+     * 批量保存套餐和菜品的关联关系
+     * @param setmealDishes
+     */
+    void insertBatch(List<SetmealDish> setmealDishes);
 }
