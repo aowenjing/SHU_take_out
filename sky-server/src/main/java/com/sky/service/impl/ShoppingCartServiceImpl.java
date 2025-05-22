@@ -82,7 +82,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
                                     userId(userID)
                                     .build();
         List<ShoppingCart> list = shoppingCartMapper.list(shoppingCart);
-        return Collections.emptyList();
+        return list;
     }
 
     /**

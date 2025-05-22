@@ -53,15 +53,4 @@ public class SetmealController {
         List<DishItemVO> list = setmealService.getDishItemById(id);
         return Result.success(list);
     }
-
-    /**
-     * 清空购物车
-     * @return
-     */
-    @ApiOperation("清空购物车")
-    @DeleteMapping("/clean")
-    public Result clean() {
-        shoppingCartService.cleanShoppingCart();
-        return Result.success();
-    }
 }
