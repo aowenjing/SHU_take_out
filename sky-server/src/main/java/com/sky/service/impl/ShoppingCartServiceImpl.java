@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.beans.beancontext.BeanContext;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -69,5 +70,18 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             shoppingCart.setCreateTime(LocalDateTime.now());
             shoppingCartMapper.insert(shoppingCart);
         }
+    }
+
+    /**
+     * 查看购物车
+     * @return
+     */
+    public List<ShoppingCart> showShoppingCart() {
+        Long userID = BaseContext.getCurrentId();
+        ShoppingCart shoppingCart = ShoppingCart.builder().
+                                    userId(userID)
+                                    .build();
+        List<ShoppingCart> list = shoppingCartMapper.list(shoppingCart);
+        return Collections.emptyList();
     }
 }
