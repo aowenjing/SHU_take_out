@@ -11,3 +11,10 @@ sky:
     access-key-id:
     access-key-secret:
     bucket-name: sky-ittake
+  redis:
+    host: localhost
+    port: 6379
+    database: 10
+  wechat:
+    appid: wx258278ae736a6e5b
+    secret: e49eb843d05407ccb759a8d849fc3ba8
