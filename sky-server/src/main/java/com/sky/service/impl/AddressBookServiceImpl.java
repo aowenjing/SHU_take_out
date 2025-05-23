@@ -70,4 +70,12 @@ public class AddressBookServiceImpl implements AddressBookService {
         addressBook.setIsDefault(1);
         addressBookMapper.update(addressBook);
     }
+
+    /**
+     * 根据id删除地址
+     * @param id
+     */
+    public void deleteById(Long id) {
+        addressBookMapper.deleteById(id);
+    }
 }
